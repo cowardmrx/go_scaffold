@@ -97,12 +97,12 @@ go_scaffold
         rules.go
 ```
 
-##使用
+## 使用
 ```go
 1.go clone git@github.com:cowardmrx/go_scaffold.git
 2.根目录运行go mod download or go get
 ```
-##运行
+## 运行
 ```go
 1.建议使用goland运行项目，方便配置必须的环境变量
 2.使用本地配置文件方式  
@@ -121,7 +121,7 @@ go_scaffold
     PORT=8989               // http服务启动端口，如果启动的是cron服务可以不用填写该配置项和APP_NAME主要用于naco服务注册使用
 ```
 
-##构建&运行
+## 构建&运行
 ```go
 1.建议使用Docker进行构建，方便环境隔离以及容器隔离，可更方便管理
 2.docker build -t go_scaffold:v1 .  // Dockerfile文件存在项目根目录可自行更改
