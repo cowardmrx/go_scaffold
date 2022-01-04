@@ -1,0 +1,21 @@
+app:
+  name: go scaffold
+
+http:
+  port: 8987
+
+database:
+  driver: mysql
+  host: 192.168.0.151
+  port: 3306
+  user: root
+  password: root
+  name: go_scaffold
+  auto_migrate: true #auto migrate is open
+
+redis:
+   host: 192.168.0.151
+   port: 6379
+   password:
+   db:
+

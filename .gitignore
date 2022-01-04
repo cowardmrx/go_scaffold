@@ -1,0 +1,14 @@
+# 屏蔽指定文件夹
+.idea
+logs
+
+#屏蔽类似文件
+*.exe
+*.example
+*.production.env
+
+# 屏蔽指定文件
+app.yaml
+main.yaml
+.env
+.production.env

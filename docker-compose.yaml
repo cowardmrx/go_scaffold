@@ -1,0 +1,15 @@
+version: "3"
+services:
+  go_scaffold:
+    image: go_scaffold:v1                                 # 镜像地址
+    container_name: go_scaffold                           # 容器名称
+    command: "/golang/app_serv --cfs NACOS http:serve"    # 运行命令 这里启动的是从nacos读取配置 并启动一个http服务
+    ports:      # 端口的映射
+     - 8987:8987
+    environment:  # 环境变量
+      - APP_NAME=go_scaffold
+      - PORT=8989
+      - NACOS_HOST=192.168.0.151
+      - NACOS_PORT=8848
+      - NAMESPACE_ID=43a4e90b-6d01-45f4-b195-06a052478cd0
+      - CONFIG_NAME=app.yaml
