@@ -71,7 +71,7 @@ func local() {
 //	@description: load config and registry server by nacos
 func nacos() {
 
-	// read config fron nacos
+	// read config from nacos
 	getConfigFromNacos()
 
 	// registry server

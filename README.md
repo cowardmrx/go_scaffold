@@ -1,7 +1,7 @@
 #go_scaffold
 
 ### 简介
-基于gin、gorm、urfave-cli的一个快速开发手脚架
+基于gin、gorm、urfave-cli的一个快速开发手脚手架
 
 ### 目录介绍
 ```go
@@ -118,7 +118,7 @@ go_scaffold
     NAMESPACE_ID=43a4e90b-6d01-45f4-b195-06a052478cd0 // nacos配置所处的命名空间
     CONFIG_NAME=app.yaml    // nacos存放配置的配置名称
     APP_NAME=go_scaffold    // 项目名称
-    PORT=8989               // http服务启动端口，如果启动的是cron服务可以不用填写该配置项和APP_NAME主要用于naco服务注册使用
+    PORT=8989               // http服务启动端口，如果启动的是cron服务可以不用填写该配置项和APP_NAME主要用于nacos服务注册使用
 ```
 
 ## 构建&运行
