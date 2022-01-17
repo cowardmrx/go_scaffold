@@ -6,6 +6,7 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
   apk upgrade && \
   apk add ca-certificates gcc g++ && update-ca-certificates && \
   apk add --update tzdata && \
+  apk add upx && \
   rm -rf /var/cache/apk/*
 
 # 构建时需要的环境变量
@@ -23,8 +24,8 @@ COPY . .
 
 # 下载项目依赖
 RUN go mod download
-# 开始压缩构建
-RUN go build -ldflags "-s -w" -o app_serv
+# 开始压缩构建 && 使用 upx 再次压缩
+RUN go build -ldflags "-s -w" -o app_serv && upx -9 app_serv
 
 FROM alpine as runner
 
